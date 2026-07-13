@@ -1,0 +1,30 @@
+.contact-form {
+  display: grid;
+  gap: 12px;
+  max-width: 520px;
+}
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+label {
+  font-weight: 600;
+}
+input,
+select,
+textarea {
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #fff;
+}
+.error {
+  color: #c92a2a;
+  font-size: 12px;
+}
+.consent {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}

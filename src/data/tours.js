@@ -4,7 +4,7 @@ import image3 from "../assets/image3.jpg";
 import image4 from "../assets/image4.jpg";
 import image5 from "../assets/image5.jpg";
 
-export const tours = [
+const tours = [
   {
     id: 1,
     title: "Planinarenje Velebit",
@@ -74,3 +74,5 @@ export const tours = [
     dates: ["2026-10-10 – 2026-10-13", "2026-12-05 – 2026-12-08"],
   },
 ];
+
+export default tours;
