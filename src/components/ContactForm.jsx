@@ -22,31 +22,21 @@ function ContactForm() {
 
   const validate = () => {
     const e = {};
-    if (!data.name || data.name.trim().length < 3)
-      e.name = "Unesite ime i prezime (min 3 znaka).";
-    if (!data.email) e.email = "Unesite email.";
-    if (data.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email))
-      e.email = "Email format nije ispravan.";
-    if (!data.topic) e.topic = "Odaberite temu.";
-    if (!data.message || data.message.trim().length < 10)
-      e.message = "Poruka mora imati najmanje 10 znakova.";
-    if (!data.consent) e.consent = "Potvrdite privolu.";
+    if(!data.name || data.name.trim().length < 3) e.name = "Unesite ime i prezime (min 3 znaka).";
+    if(!data.email) e.email = "Unesite email.";
+    if(data.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) e.email = "Email format nije ispravan.";
+    if(!data.topic) e.topic = "Odaberite temu.";
+    if(!data.message || data.message.trim().length < 10) e.message = "Poruka mora imati najmanje 10 znakova.";
+    if(!data.consent) e.consent = "Potvrdite privolu.";
     setErrors(e);
-    return Object.keys(e).length === 0;
-  };
+    return Object.keys(e).length === 0; 
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (validate()) {
-      alert("Poruka poslana! Hvala na javljanju.");
-      setData({
-        name: "",
-        email: "",
-        phone: "",
-        topic: "",
-        message: "",
-        consent: false,
-      });
+    if(validate()) {
+      alert("Poruka uspješno poslana!"); 
+      setData({name:"", email:"", phone:"", topic:"", message:"", consent:false});.
       setErrors({});
     }
   };

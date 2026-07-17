@@ -11,7 +11,7 @@ function Accordion({ question, answer }) {
         aria-expanded={open}
       >
         {question}
-        <span className="chev">{open ? "−" : "+"}</span>
+        <span className="chev">{open ? "-" : "+"}</span>
       </button>
       {open && <div className="accordion-content">{answer}</div>}
     </div>
